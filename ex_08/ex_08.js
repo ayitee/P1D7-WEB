@@ -4,7 +4,6 @@ window.onload = () => {
   const totalElement = document.getElementById("total");
   let total = 0;
 
-  
   addToCartButtons.forEach(button => {
     button.addEventListener("click", (event) => {
       const productElement = event.target.closest(".product");
@@ -14,14 +13,12 @@ window.onload = () => {
       let cartItem = cart.querySelector(`.cart-item[data-product-name="${productName}"]`);
       
       if (cartItem) {
-        
         const quantityElement = cartItem.querySelector(".cart-item-quantity");
         let quantity = parseInt(quantityElement.textContent, 10);
         quantity++;
         quantityElement.textContent = quantity;
         cartItem.querySelector(".cart-item-price").textContent = `$${(productPrice * quantity).toFixed(2)}`;
       } else {
-        
         cartItem = document.createElement("div");
         cartItem.classList.add("cart-item");
         cartItem.setAttribute("data-product-name", productName);
@@ -35,7 +32,6 @@ window.onload = () => {
         `;
         cart.appendChild(cartItem);
 
-        
         cartItem.querySelector(".remove-from-cart-btn").addEventListener("click", () => {
           const quantity = parseInt(cartItem.querySelector(".cart-item-quantity").textContent, 10);
           total -= productPrice * quantity;
@@ -43,7 +39,6 @@ window.onload = () => {
           cartItem.remove();
         });
 
-       
         cartItem.querySelector(".increase-quantity-btn").addEventListener("click", () => {
           const quantityElement = cartItem.querySelector(".cart-item-quantity");
           let quantity = parseInt(quantityElement.textContent, 10);
@@ -54,7 +49,6 @@ window.onload = () => {
           totalElement.textContent = `Total: $${total.toFixed(2)}`;
         });
 
-       
         cartItem.querySelector(".decrease-quantity-btn").addEventListener("click", () => {
           const quantityElement = cartItem.querySelector(".cart-item-quantity");
           let quantity = parseInt(quantityElement.textContent, 10);
@@ -68,7 +62,6 @@ window.onload = () => {
         });
       }
 
-      
       total += productPrice;
       totalElement.textContent = `Total: $${total.toFixed(2)}`;
     });
@@ -76,10 +69,10 @@ window.onload = () => {
 };
 
 /*
-Explications :
-1. Vérification si le produit est déjà dans le panier avec `querySelector` et un attribut personnalisé (`data-product-name`).
-2. Si le produit est déjà présent, on augmente la quantité en modifiant l'élément `.cart-item-quantity`.
-3. Si le produit n'est pas dans le panier, un nouvel élément est créé.
-4. Des boutons "+" et "-" permettent d'augmenter ou de diminuer la quantité de chaque produit dans le panier.
-5. Lors de la suppression, le total est recalculé en tenant compte de la quantité du produit à retirer.
+1. On page load, all buttons with class `add-to-cart-btn` are selected and an event listener is added to each.
+2. When a button is clicked, the product's name and price are extracted from the closest product element.
+3. The code checks if the product is already in the cart using a custom attribute (`data-product-name`).
+4. If the product is already in the cart, the quantity is increased and the total price for that item is updated.
+5. If the product is not in the cart, a new cart item is created, complete with buttons for increasing, decreasing, and removing items.
+6. The total cost is recalculated and displayed in the designated total element each time items are added or modified in the cart.
 */
