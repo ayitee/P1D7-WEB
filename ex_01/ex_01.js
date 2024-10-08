@@ -13,6 +13,8 @@ window.onload = () => {
   rectangle.addEventListener("mouseenter", reduceOpacity);
   rectangle.addEventListener("mouseleave", resetOpacity);
 }; 
+
+// EJEOJDJDOEOJEOJDODKEOKDOKDOEKEKODK
 // Reduces the rectangle's opacity by multiplying it by 0.5 when mouse enters.
 // Resets the rectangle's opacity to 1 when mouse leaves.
 // Adds event listeners for 'mouseenter' and 'mouseleave' when the page loads.
