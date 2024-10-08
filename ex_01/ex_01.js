@@ -12,12 +12,7 @@ window.onload = () => {
   const rectangle = document.getElementById("square");
   rectangle.addEventListener("mouseenter", reduceOpacity);
   rectangle.addEventListener("mouseleave", resetOpacity);
-};
-
-/*
-Explications :
-1. La fonction reduceOpacity réduit l'opacité du rectangle en la multipliant par 0,5.
-2. La fonction resetOpacity réinitialise l'opacité à 1.
-3. Lorsque le curseur est au-dessus du rectangle ('mouseenter'), l'opacité est réduite.
-4. Lorsque le curseur quitte le rectangle ('mouseleave'), l'opacité est réinitialisée.
-*/
+}; 
+// Reduces the rectangle's opacity by multiplying it by 0.5 when mouse enters.
+// Resets the rectangle's opacity to 1 when mouse leaves.
+// Adds event listeners for 'mouseenter' and 'mouseleave' when the page loads.
