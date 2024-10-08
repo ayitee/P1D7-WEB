@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
     background-color: #111;
     font-family: "Montserrat", serif;
@@ -28,7 +29,6 @@ h1 {
     line-height: .75;
     margin: 10px 0;
 }
-/* styling my button */
 
 .white-mode {
     text-decoration: none;
@@ -47,3 +47,10 @@ h1 {
     background-color: #FFF;
     color: #122;
 }
+
+/*
+1. The body has a dark background, centered text, and uses Montserrat font.
+2. The h1 element features a GIF background, transparent text, and is styled to look visually appealing with uppercase letters and a large font size.
+3. The button (.white-mode) has a background color, padding, and transitions for a hover effect that changes the background and text color.
+4. The button is positioned at the bottom left of the viewport.
+*/
