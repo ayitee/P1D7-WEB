@@ -12,27 +12,22 @@ function shuffleTitle() {
 window.onload = () => {
   const titleElement = document.getElementById("title");
 
-  
   intervalId = setInterval(shuffleTitle, 2000);
 
- 
   titleElement.addEventListener("mouseenter", () => {
     isTitleFrozen = true;
   });
 
- 
   titleElement.addEventListener("mouseleave", () => {
     isTitleFrozen = false;
   });
 
-  
   titleElement.addEventListener("click", () => {
     navigator.clipboard.writeText(titleElement.textContent).then(() => {
       clearInterval(intervalId);
     });
   });
 
- 
   document.addEventListener("click", (event) => {
     if (event.target.id !== "title") {
       if (!intervalId) {
@@ -41,7 +36,6 @@ window.onload = () => {
     }
   });
 
- 
   document.addEventListener("keydown", (event) => {
     if (event.key === "!") {
       setTimeout(() => {
@@ -52,10 +46,9 @@ window.onload = () => {
 };
 
 /*
-Explications :
-1. La fonction `shuffleTitle()` mélange les mots du titre et met à jour son contenu.
-2. Toutes les 2 secondes, le titre est mélangé sauf s'il est gelé (lorsque la souris est dessus).
-3. Lors d'un clic sur le titre, le texte est copié dans le presse-papiers et le mélange s'arrête.
-4. Lors d'un clic en dehors du titre, le mélange redémarre.
-5. Lorsqu'on appuie sur la touche "!", une alerte avec "42!" s'affiche après 42 secondes.
-*/
+1. The function `shuffleTitle()` randomizes the title's words and updates the content.
+2. The title is shuffled every 2 seconds unless the mouse is over it (frozen state).
+3. Clicking the title copies the text to the clipboard and stops shuffling.
+4. Clicking outside the title restarts the shuffling.
+5. Pressing the "!" key triggers an alert with "42!" after 42 seconds.
+*/ 
