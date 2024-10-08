@@ -182,4 +182,6 @@ h1 {
 5. #screen-text-container p defines the appearance and animation of the text inside the screen.
 6. .form styles the input fields and labels, providing a focus effect and transition animations.
 7. #speech-bubble styles the speech bubble with a background, padding, and shadow effects.
-8.​⬤
+8. Animation keyframes create a scrolling effect for the text on the robot's screen.
+9. .invisible hides elements when needed.
+*/ 
