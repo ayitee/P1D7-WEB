@@ -21,7 +21,6 @@ body {
   background: #FFFFFF;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   border-radius: 6px;
-
   display: flex;
   flex-direction: column;
 }
@@ -49,7 +48,6 @@ body {
   border-top:  1px solid #E1E8EE;
   border-bottom:  1px solid #E1E8EE;
 }
-
 
 .buttons {
   position: relative;
@@ -93,11 +91,9 @@ body {
   100% { background-position: right; }
 }
 
-
 .image {
   margin-right: 50px;
 }
-
 
 .description {
   padding-top: 10px;
@@ -121,11 +117,11 @@ body {
   color: #86939E;
 }
 
-
 .quantity {
   padding-top: 20px;
   margin-right: 60px;
 }
+
 .quantity input {
   -webkit-appearance: none;
   border: none;
@@ -144,15 +140,18 @@ button[class*=btn] {
   border: none;
   cursor: pointer;
 }
+
 .minus-btn img {
   margin-bottom: 3px;
 }
+
 .plus-btn img {
   margin-top: 2px;
 }
+
 button:focus,
 input:focus {
-  outline:0;
+  outline: 0;
 }
 
 /* Total Price */
@@ -172,14 +171,17 @@ input:focus {
     height: auto;
     overflow: hidden;
   }
+
   .item {
     height: auto;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .image img {
     width: 50%;
   }
+
   .image,
   .quantity,
   .description {
@@ -187,7 +189,19 @@ input:focus {
     text-align: center;
     margin: 6px 0;
   }
+
   .buttons {
     margin-right: 20px;
   }
 }
+
+/* 
+Defines basic layout and font style for the page.
+.shopping-cart: main container for the shopping cart with a fixed width and flex column layout.
+.item: individual product row with flexible height and padding.
+.delete-btn: delete button styled as an icon, removes a product.
+.like-btn: heart icon for liking a product with animated effect when clicked.
+.quantity: input and buttons to increase/decrease product quantity.
+.total-price: styles total price text.
+Responsive rules for widths below 800px to adjust item layout and size for small screens.
+*/ 
