@@ -38,3 +38,13 @@ button {
         height: 50vw;
     }
 }
+
+/* 
+Sets the body to take the full height, removing margin and padding.
+Defines a flex container that covers the whole screen with a white background.
+The square div is centered using auto margin and has a light blue background.
+Adds smooth transitions for all properties over 0.5 seconds for cross-browser compatibility.
+Media queries adjust the square's dimensions based on screen orientation: 
+- 50vh for landscape mode, 
+- 50vw for portrait mode.
+*/
