@@ -51,3 +51,15 @@ button {
         height: 50vw;
     }
 }
+
+/* 
+Sets body to fill the entire height of the screen and removes margin/padding.
+Defines a root variable for the action bar height.
+The #actions section uses flexbox and has a fixed height defined by the root variable.
+The container fills the remaining screen space, uses flexbox to center its contents, and has an orange background.
+Buttons are centered within the action bar using auto margin.
+#circle is styled as a red circle with an image of an upward arrow, with smooth transitions.
+Media queries adjust the size of the circle:
+- In landscape, it takes 50% of the viewport height.
+- In portrait, it takes 50% of the viewport width.
+*/
