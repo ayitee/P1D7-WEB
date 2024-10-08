@@ -14,13 +14,13 @@ body {
 }
 
 .container {
-    position:relative;
+    position: relative;
 }
 
 #robot {
     width: 500px;
     height: 400px;
-    position:relative;
+    position: relative;
 }
 
 #screen-text-container {
@@ -40,22 +40,16 @@ body {
     font-family: 'VT323', monospace;
     color: lawngreen;
     font-size: 30px;
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
-
-    -moz-animation: my-animation 8s linear infinite;
-    -webkit-animation: my-animation 8s linear infinite;
     animation: my-animation 8s linear infinite;
 }
-
-
 
 h1 {
     padding-bottom: 30px;
     font-weight: 900;
     font-size: 35px;
 }
+
 .form {
     width: 30%;
     position: relative;
@@ -71,6 +65,7 @@ h1 {
     border: none;
     background-color: #f38181;
 }
+
 .form label {
     position: absolute;
     bottom: 0px;
@@ -80,6 +75,7 @@ h1 {
     pointer-events: none;
     border-bottom: 1px solid white;
 }
+
 .form label::after {
     content: "";
     position: absolute;
@@ -99,9 +95,11 @@ h1 {
     padding-bottom: 5px;
     transition: all 0.3s ease;
 }
+
 .form input:focus {
     outline: none;
 }
+
 .form input:focus + .label-name .content-name,
 .form input:valid + .label-name .content-name {
     transform: translateY(-150%);
@@ -109,6 +107,7 @@ h1 {
     left: 0;
     color: #fce38a;
 }
+
 .form input:focus + .label-name::after,
 .form input:valid + .label-name::after {
     transform: translateX(0%);
@@ -131,55 +130,42 @@ h1 {
     font-size: 18px;
     font-family: 'VT323', serif;
 }
+
 #speech-bubble:before,
 #speech-bubble:after {
-    content:"";
-    background-color:#fff;
-    border-radius:50%;
-    display:block;
-    position:absolute;
-    z-index:-1;
+    content: "";
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: -1;
 }
+
 #speech-bubble:before {
-    width:44px;
-    height:44px;
-    top:-12px;
-    left:28px;
-    box-shadow:-50px 30px 0 -12px #fff;
+    width: 44px;
+    height: 44px;
+    top: -12px;
+    left: 28px;
+    box-shadow: -50px 30px 0 -12px #fff;
 }
+
 #speech-bubble:after {
-    bottom:-10px;
-    right:26px;
-    width:30px;
-    height:30px;
-    box-shadow:40px -34px 0 0 #fff,
-    -28px -6px 0 -2px #fff,
-    -24px 17px 0 -6px #fff,
-    -5px 25px 0 -10px #fff;
-
+    bottom: -10px;
+    right: 26px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 40px -34px 0 0 #fff,
+                -28px -6px 0 -2px #fff,
+                -24px 17px 0 -6px #fff,
+                -5px 25px 0 -10px #fff;
 }
 
-/* for Firefox */
-@-moz-keyframes my-animation {
-    from { -moz-transform: translateX(100%); }
-    to { -moz-transform: translateX(-100%); }
-}
-
-/* for Chrome */
-@-webkit-keyframes my-animation {
-    from { -webkit-transform: translateX(100%); }
-    to { -webkit-transform: translateX(-100%); }
-}
-
+/* Animation keyframes for scrolling text */
 @keyframes my-animation {
     from {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
         transform: translateX(100%);
     }
     to {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
     }
 }
@@ -187,3 +173,13 @@ h1 {
 .invisible {
     visibility: hidden;
 }
+
+/*
+1. Body styles center content with a background color and set font properties.
+2. .container positions the robot relative to its parent.
+3. #robot sets the size of the robot element.
+4. #screen-text-container styles the display of the robot's screen text.
+5. #screen-text-container p defines the appearance and animation of the text inside the screen.
+6. .form styles the input fields and labels, providing a focus effect and transition animations.
+7. #speech-bubble styles the speech bubble with a background, padding, and shadow effects.
+8.​⬤
